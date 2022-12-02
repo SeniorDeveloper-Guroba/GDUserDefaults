@@ -3,7 +3,7 @@ import Foundation
 
 public final class UserDefaultsStandard {
     
-    static let shared = UserDefaultsStandard()
+    static public let shared = UserDefaultsStandard()
     
     private let standard = UserDefaults.standard
     
