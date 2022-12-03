@@ -21,8 +21,5 @@ let package = Package(
         .target(
             name: "GDUserDefaults",
             dependencies: []),
-        .testTarget(
-            name: "GDUserDefaultsTests",
-            dependencies: ["GDUserDefaults"]),
     ]
 )
