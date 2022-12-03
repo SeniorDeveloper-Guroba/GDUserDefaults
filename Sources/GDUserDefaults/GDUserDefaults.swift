@@ -11,7 +11,7 @@ public final class UserDefaultsStandard {
         standard.set(value, forKey: key.rawValue)
     }
     
-    public func get<T: Any>(key: StoreProjectKey.Key) -> T? {
+    public func get<T>(key: StoreProjectKey.Key) -> T? {
         return standard.object(forKey: key.rawValue) as? T
     }
     
@@ -19,7 +19,7 @@ public final class UserDefaultsStandard {
         standard.set(value, forKey: key)
     }
     
-    public func get<T: Any>(key: String) -> T? {
+    public func get<T>(key: String) -> T? {
         return standard.object(forKey: key) as? T
     }
 }
