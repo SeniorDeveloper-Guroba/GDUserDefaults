@@ -12,7 +12,8 @@ public final class UserDefaultsStandard {
     }
     
     public func get<T>(key: StoreProjectKey.Key) -> T? {
-        return standard.object(forKey: key.rawValue) as? T
+        let value = standard.object(forKey: key.rawValue) as? T
+        return value
     }
     
     public func save<T>(key: String, value: T) {
@@ -20,7 +21,8 @@ public final class UserDefaultsStandard {
     }
     
     public func get<T>(key: String) -> T? {
-        return standard.object(forKey: key) as? T
+        let value = standard.object(forKey: key) as? T
+        return value
     }
 }
 
