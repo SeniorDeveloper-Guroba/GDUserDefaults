@@ -7,19 +7,19 @@ public final class UserDefaultsStandard {
     
     private let standard = UserDefaults.standard
     
-    public func save<T>(key: StoreProjectKey.Key, value: T) {
+    public func saveForKey<T>(key: StoreProjectKey.Key, value: T) {
         standard.set(value, forKey: key.rawValue)
     }
     
-    public func get<T: Any>(key: StoreProjectKey.Key) -> T? {
+    public func getForKey<T: Any>(key: StoreProjectKey.Key) -> T? {
         return standard.object(forKey: key.rawValue) as? T
     }
     
-    public func save<T>(key: String, value: T) {
+    public func saveForString<T>(key: String, value: T) {
         standard.set(value, forKey: key)
     }
     
-    public func get<T: Any>(key: String) -> T? {
+    public func getForString<T: Any>(key: String) -> T? {
         return standard.object(forKey: key) as? T
     }
 }
@@ -35,5 +35,7 @@ public class StoreProjectKey {
         case token
         case isRegistration
         case userID
+        case isMute
+        case score
     }
 }
